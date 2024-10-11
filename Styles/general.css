@@ -1,0 +1,20 @@
+/*
+Dark Theme Color Pallete:
+1. Orangish: #FF6500
+2. lightly dark blue: #1E3E62
+3. slightly more dark blue than above: #0B192C
+4.  black  : #000000
+*/
+
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #356fb0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.everything {
+  display: flex;
+  height: 100vh;
+}
