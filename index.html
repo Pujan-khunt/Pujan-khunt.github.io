@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pujan's JS Notes</title>
-    <link rel="stylesheet" href="Styles/general.css">
+    <link rel="stylesheet" href="Styles/general.css" />
     <link rel="stylesheet" href="Styles/side-bar.css" />
-    <link rel="stylesheet" href="Styles/main.css">
-    <link rel="stylesheet" href="Styles/nav-bar.css">
+    <link rel="stylesheet" href="Styles/content.css" />
+    <link rel="stylesheet" href="Styles/nav-bar.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+    ></script>
+    <script src="markdownParser.js"></script>
   </head>
   <body>
     <div class="everything">
       <div class="side-bar">
         <div class="profile-section">
-          
-					<img class="profile-photo" src="Assets/Profile-Pic.jpeg">
-          
+          <img class="profile-photo" src="Assets/Profile-Pic.jpeg" />
+
           <div class="title">Pujan Khunt</div>
-          <div class="description">Hi Friend 👋 <br/> Enjoy My Notes 📝</div>
+          <div class="description">
+            Hi Friend 👋 <br />
+            Enjoy My Notes 📝
+          </div>
         </div>
 
         <div class="notes-type">
@@ -28,7 +36,7 @@
 
       <div class="main-section">
         <div class="nav-bar">Home Tags</div>
-        <div class="display-section"></div>
+        <div id="content"></div>
       </div>
     </div>
   </body>
