@@ -22,7 +22,7 @@ Profile Section contains:
 
 /* 1. Image */
 .profile-section .profile-photo {
-  border: 3px solid rgb(10, 243, 211);
+  border: 4px solid #FF6500;
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -38,10 +38,10 @@ Profile Section contains:
 
 /* 1. Description */
 .profile-section .description {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	text-align: center;
-	line-height: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 25px;
 }
 
 /*
@@ -49,17 +49,37 @@ Sources of my JS notes:
 1. Namaste JS
 2. Mrinal Sir's class notes
 */
-.notes-type {
+.side-bar-content {
   display: flex;
   flex-direction: column;
   margin-top: 70px;
 }
 
-.notes-type a {
+#notes-type li {
   font-weight: 600;
-  color: #1E3E62;
+  color: #1e3e62;
   margin-bottom: 50px;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
+}
+
+.notes-list {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#namaste-js-notes,
+#web-dev-notes {
+  color: #1e3e62;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+#namaste-js-notes li,
+#web-dev-notes li {
+  color: #1e3e62;
+  margin-top: 30px;
 }
