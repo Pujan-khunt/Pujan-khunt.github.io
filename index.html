@@ -13,7 +13,9 @@
       defer
       src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
     ></script>
-    <script src="markdownParser.js"></script>
+
+    <script defer src="side-bar.js"></script>
+    <script defer src="markdownParser.js"></script>
   </head>
   <body>
     <div class="everything">
@@ -28,9 +30,37 @@
           </div>
         </div>
 
-        <div class="notes-type">
-          <a href="">Namaste JavaScript</a>
-          <a href="">Web Dev - Mrinal Sir</a>
+        <div class="side-bar-content">
+          <ul id="notes-type">
+            <li onclick="showNotesList('namaste-js-notes')"> Namaste JavaScript</li>
+            <li onclick="showNotesList('web-dev-notes')"> Web Dev - Mrinal Sir</li>
+          </ul>
+        </div>
+
+        <div class="notes-list" style="display: none;">
+          <ul id="web-dev-notes" style="display: none;">
+            <li onclick="loadNoteContent('notes/web-dev/class-1')">Web Dev note 1</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-2')">Web Dev note 2</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-3')">Web Dev note 3</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-4')">Web Dev note 4</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-5')">Web Dev note 5</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-6')">Web Dev note 6</li>
+            <li onclick="loadNoteContent('notes/web-dev/class-7')">Web Dev note 7</li>
+          </ul>
+
+          <ul id="namaste-js-notes" style="display: none;">
+            <li onclick="loadNoteContent('notes/namaste-js/How-JS-Works.md')">JS-01</li>
+            <li onclick="loadNoteContent('notes/namaste-js/How-JS-Executes.md')">JS-02</li>
+            <li onclick="loadNoteContent('notes/namaste-js/How-Hoisting-Works.md')">JS-03</li>
+            <li onclick="loadNoteContent('notes/namaste-js/How-Functions-Work.md')">JS-04</li>
+            <li onclick="loadNoteContent('notes/namaste-js/Window-and-This-Keyword.md')">JS-05</li>
+            <li onclick="loadNoteContent('notes/namaste-js/undefined-vs-not-defined.md')">JS-06</li>
+            <li onclick="loadNoteContent('notes/namaste-js/scope-chain.md')">JS-07</li>
+            <li onclick="loadNoteContent('notes/namaste-js/let-and-const.md')">JS-08</li>
+            <li onclick="loadNoteContent('notes/namaste-js/block-scope-and-shadowing.md')">JS-09</li>
+            <li onclick="loadNoteContent('notes/namaste-js/closures.md')">JS-10</li>
+            <li onclick="loadNoteContent('notes/namaste-js/setTimeouts-and-Closures.md')">JS-11</li>
+          </ul>
         </div>
       </div>
 

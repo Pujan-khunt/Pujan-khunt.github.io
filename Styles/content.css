@@ -55,3 +55,13 @@
   padding: 2px 4px;
   border-radius: 3px;
 }
+
+/* Links */
+#content a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
