@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ticket Management</title>
-    <link rel="stylesheet" href="./output.css">
-  </head>
-  <body class="bg-gray-900">
 
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./output.css" />
+</head>
+
+<body class="bg-gray-900 min-h-screen">
+  <div id="navbar" class="bg-gray-600 h-20 grid grid-cols-12 items-center">
+    <div id="color-filter" class="h-16 grid grid-cols-4 bg-zinc-800 w-full col-start-2 col-end-4">
+      <div class="filter-color m-3 col-span-1 bg-blue-500"></div>
+      <div class="filter-color m-3 col-span-1 bg-red-500"></div>
+      <div class="filter-color m-3 col-span-1 bg-green-500"></div>
+      <div class="filter-color m-3 col-span-1 bg-black"></div>
+    </div>
+
+    <div id="tickets-editor" class="bg-zinc-800 h-16 col-start-5 col-end-6 grid grid-cols-2">
+      <div id="add-ticket-btn" class="flex justify-center items-center">
+        <i class="text-neutral-500 text-4xl fa-solid fa-plus hover:text-green-400"></i>
+      </div>
+
+      <div id="remove-ticket-btn" class="flex justify-center items-center ">
+        <i class="text-neutral-500 text-3xl fa-solid fa-trash hover:text-red-700"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- All the tickets will be displayed inside this div -->
+  <div id="main" class="min-h-screen min-w-full grid grid-cols-[470px_470px_470px_470px] grid-col-5  justify-center">
+    <!-- Example of a ticket  -->
+    <!-- <div class="flex justify-center mt-12">
+      <div id="ticket" class="w-64 h-72 bg-blue-500 relative">
+        <div id="priority-color" class="w-full h-12 ${priorityColor}"></div>
+        <div id="id" class="w-full flex justify-center h-8 bg-yellow-300">${id}</div>
+        <div id="task" class="w-full h-52 bg-orange-600 overflow-y-auto">${task}</div>
+        <i class="fa-regular fa-pen-to-square absolute right-2 bottom-1 text-3xl"></i>
+      </div>
+    </div> -->
+  </div>
+
+  <!-- becomes grid when activated else hidden -->
+  <div id="modal" class="hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 grid-cols-5 w-1/2 h-4/5">
+    <textarea class="bg-gray-400 outline-none text-4xl p-10 col-span-3 h-full"></textarea>
+    <div class="col-span-2 h-full bg-gray-500">
+      <div class="w-full h-full flex flex-col items-center justify-evenly">
+        <div class="modal-color w-44 h-28 bg-blue-500"></div>
+        <div class="modal-color w-44 h-28 bg-red-500"></div>
+        <div class="modal-color w-44 h-28 bg-green-500"></div>
+        <div class="modal-color w-44 h-28 bg-black"></div>
+      </div>
+    </div>
+
+    <div id="close-modal"
+      class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 text-2xl rounded-full w-8 h-8 bg-red-600 flex justify-center items-center">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
