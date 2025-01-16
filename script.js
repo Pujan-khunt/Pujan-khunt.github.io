@@ -147,7 +147,7 @@ function handleRemoval(ticket, id) {
 
 // Change settings for task to be editable
 function handleEditable(ticket, id) {
-    const taskCont = document.querySelector('#task');
+    const taskCont = ticket.querySelector('#task');
     const editable = ticket.querySelector('#editable');
     let editableFlag = false;
     
